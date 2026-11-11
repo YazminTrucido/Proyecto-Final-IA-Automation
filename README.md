@@ -65,12 +65,12 @@ El diagrama completo, el recorrido nodo por nodo, el manual de datos, la matriz 
 
 | # | Prueba | Resultado esperado | Evidencia |
 |---|---|---|---|
-| 1 | Lead VIP completo, aprobado | Estado `Enviado` + Thread ID | `screenshots/01-...` |
-| 2 | Consulta vaga sin presupuesto | Categoría Calificado o Frío, enviado | `screenshots/02-...` |
-| 3 | Rechazo humano | `Rechazado por humano`, el cliente no recibe nada | `screenshots/03-...` |
-| 4 | Datos incompletos (sin email) | `Datos incompletos` + registro en Errores | `screenshots/04-...` |
-| 5 | Mismo email repetido | Registro "Lead duplicado" | `screenshots/05-...` |
-| 6 | Falla de la API de IA (clave inválida) | "Fallo API IA" + revisión manual + aviso | `screenshots/07-...` |
+| 1 | Lead VIP completo, aprobado | Estado `Enviado` + Thread ID | `screenshots/caso_lead_vip.png` |
+| 2 | Consulta vaga sin presupuesto | Categoría Calificado o Frío, enviado | `screenshots/caso_lead_frio.png` |
+| 3 | Rechazo humano | `Rechazado por humano`, el cliente no recibe nada | `screenshots/caso_lead_frio.png` |
+| 4 | Datos incompletos (sin email) | `Datos incompletos` + registro en Errores | `screenshots/registro_de_errores.png` |
+| 5 | Mismo email repetido | Registro "Lead duplicado" | `screenshots/manejo_duplicados.png` |
+| 6 | Falla de la API de IA (clave inválida) | "Fallo API IA" + revisión manual + aviso | `screenshots/registro_de_errores.png` |
 
 ## Cómo importarlo
 
