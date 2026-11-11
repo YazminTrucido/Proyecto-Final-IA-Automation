@@ -1,0 +1,55 @@
+{
+  "name": "Proyecto Final · Alertas de errores globales",
+  "nodes": [
+    {
+      "parameters": {},
+      "id": "2c9ba04f-28c7-5f54-8fda-d150a476881f",
+      "name": "Error Trigger (fallo no previsto)",
+      "type": "n8n-nodes-base.errorTrigger",
+      "typeVersion": 1,
+      "position": [
+        0,
+        0
+      ]
+    },
+    {
+      "parameters": {
+        "sendTo": "TU-EMAIL@gmail.com",
+        "subject": "=🚨 Falló el workflow: {{ $json.workflow.name }}",
+        "emailType": "html",
+        "message": "=<p>Una ejecución terminó con un error que no estaba previsto en las rutas de error.</p><p><b>Workflow:</b> {{ $json.workflow.name }}<br><b>Nodo:</b> {{ $json.execution.lastNodeExecuted }}<br><b>Error:</b> {{ $json.execution.error.message }}<br><b>Ver ejecución:</b> <a href=\"{{ $json.execution.url }}\">{{ $json.execution.url }}</a></p>",
+        "options": {
+          "appendAttribution": false
+        }
+      },
+      "id": "2e13b986-0db4-5f36-8149-ea734c6d8fba",
+      "name": "Avisar falla global por email",
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 2.1,
+      "position": [
+        240,
+        0
+      ],
+      "webhookId": "27fa8444-dcf2-523f-966e-8df1658c6056"
+    }
+  ],
+  "connections": {
+    "Error Trigger (fallo no previsto)": {
+      "main": [
+        [
+          {
+            "node": "Avisar falla global por email",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "pinData": {},
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "tags": []
+}
