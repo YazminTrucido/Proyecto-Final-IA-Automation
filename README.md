@@ -1,18 +1,18 @@
 # Gestor de Leads con IA y aprobación humana
 
-**Proyecto final · IA Automation · Diplomatura en Data Science**
-Alumna: Yazmin
+**Proyecto final · IA Automation · Diplomatura**
+Alumna: Yazmin Trucido
 
-Ecosistema de automatización que resuelve de punta a punta la atención de consultas comerciales de **Estudio Lumen**, una agencia ficticia de diseño web: recibe el lead, lo valida, lo guarda en Airtable, lo hace analizar por la IA (clasificación VIP / Calificado / Frío / Spam, puntaje y borrador de respuesta basado en el catálogo real), pide aprobación humana por email y recién entonces le responde al cliente por Gmail, guardando el Thread ID.
+Ecosistema de automatización que resuelve de punta a punta la atención de consultas comerciales de **Estudio Lumen**, una agencia ficticia: recibe el lead, lo valida, lo guarda en Airtable, lo hace analizar por la IA (clasificación VIP / Calificado / Frío / Spam, puntaje y borrador de respuesta basado en el catálogo real), pide aprobación humana por email y recién entonces le responde al cliente por Gmail, guardando el Thread ID.
 
 ## Enlaces de la entrega
 
 | Qué | Link |
 |---|---|
-| Base de datos Airtable (modo lectura) | `PEGAR AQUÍ EL LINK DE LA VISTA COMPARTIDA` |
-| Dashboard de control (KPIs y tasa de error) | `PEGAR AQUÍ EL LINK DEL DASHBOARD` |
+| Base de datos Airtable (modo lectura) | [`PEGAR AQUÍ EL LINK DE LA VISTA COMPARTIDA`](https://airtable.com/appbZ1Pefps0x5rZy/shrhHYOXvNbDbkBOJ) |
+| Dashboard de control (KPIs y tasa de error) | [`PEGAR AQUÍ EL LINK DEL DASHBOARD`](https://airtable.com/appbZ1Pefps0x5rZy/shr2dm179kRLeuIdD) |
 | Video demo (3 min) | `PEGAR AQUÍ EL LINK DEL VIDEO` |
-| Documento de arquitectura (PDF) | [docs/Arquitectura-y-Documentacion.pdf](docs/Arquitectura-y-Documentacion.pdf) |
+| Documento de arquitectura (PDF) | [docs/Arquitectura-y-Documentacion.pdf](docs/Arquitectura y Documentacion.pdf) |
 | Flujo principal n8n (JSON) | [workflow/gestor-leads-ia.json](workflow/gestor-leads-ia.json) |
 | Flujo de alertas globales (JSON) | [workflow/alertas-errores-globales.json](workflow/alertas-errores-globales.json) |
 
@@ -22,7 +22,7 @@ Ecosistema de automatización que resuelve de punta a punta la atención de cons
 |---|---|---|
 | Orquestador | **n8n** | Flujo principal de 39 nodos (más 5 notas explicativas) + flujo de alertas de errores |
 | Base de datos | **Airtable** | Memoria del sistema: Leads, Servicios, Interacciones y Errores (tablas vinculadas) |
-| Procesamiento IA | **Google Gemini** (`gemini-2.5-flash-lite`, por su API compatible con OpenAI) | Clasificación + redacción con prompt dinámico, salida JSON y `max_tokens` limitado. Cambiar a OpenAI es editar `ia_url` y `modelo_ia` en Configuración |
+| Procesamiento IA | **Google Gemini** (`gemini-3.5-flash-lite`, por su API compatible con OpenAI) | Clasificación + redacción con prompt dinámico, salida JSON y `max_tokens` limitado. Cambiar a OpenAI es editar `ia_url` y `modelo_ia` en Configuración |
 | Canal de salida | **Gmail** | Email de aprobación (HITL), respuesta al cliente y confirmaciones dentro del mismo hilo |
 
 ## Cómo funciona
@@ -43,7 +43,7 @@ Formulario web (webhook)
       └─ vence    → Lead "Sin respuesta (vencido)" + aviso en el hilo
 ```
 
-El diagrama completo, el recorrido nodo por nodo, el manual de datos, la matriz de costos y la sección de seguridad están en el [PDF](docs/Arquitectura-y-Documentacion.pdf).
+El diagrama completo, el recorrido nodo por nodo, el manual de datos, la matriz de costos y la sección de seguridad están en el [PDF](docs/Arquitectura y Documentacion.pdf).
 
 ## Requisitos de la consigna
 
@@ -70,9 +70,7 @@ El diagrama completo, el recorrido nodo por nodo, el manual de datos, la matriz 
 | 3 | Rechazo humano | `Rechazado por humano`, el cliente no recibe nada | `screenshots/03-...` |
 | 4 | Datos incompletos (sin email) | `Datos incompletos` + registro en Errores | `screenshots/04-...` |
 | 5 | Mismo email repetido | Registro "Lead duplicado" | `screenshots/05-...` |
-| 6 | Spam | `Descartado (spam)` | `screenshots/06-...` |
-| 7 | Falla de la API de IA (clave inválida) | "Fallo API IA" + revisión manual + aviso | `screenshots/07-...` |
-| 8 | Remitente `noreply@...` | `Datos incompletos` (anti-bucle) | `screenshots/08-...` |
+| 6 | Falla de la API de IA (clave inválida) | "Fallo API IA" + revisión manual + aviso | `screenshots/07-...` |
 
 ## Cómo importarlo
 
@@ -100,4 +98,4 @@ La base de Airtable se genera con la instrucción de [`database/omni-ai-prompt.m
 └── screenshots/   (evidencias de las pruebas)
 ```
 
-Para este proyecto trabajé con un asistente de IA (Claude) como apoyo.
+Para este proyecto se trabajó con un asistente de IA (Claude) como apoyo.
