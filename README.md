@@ -9,10 +9,10 @@ Ecosistema de automatización que resuelve de punta a punta la atención de cons
 
 | Qué | Link |
 |---|---|
-| Base de datos Airtable (modo lectura) | [`PEGAR AQUÍ EL LINK DE LA VISTA COMPARTIDA`](https://airtable.com/appbZ1Pefps0x5rZy/shrhHYOXvNbDbkBOJ) |
-| Dashboard de control (KPIs y tasa de error) | [`PEGAR AQUÍ EL LINK DEL DASHBOARD`](https://airtable.com/appbZ1Pefps0x5rZy/shr2dm179kRLeuIdD) |
+| Base de datos Airtable (modo lectura) | [LINK DE LA VISTA COMPARTIDA](https://airtable.com/appbZ1Pefps0x5rZy/shrhHYOXvNbDbkBOJ) |
+| Dashboard de control (KPIs y tasa de error) | [LINK DEL DASHBOARD](https://airtable.com/appbZ1Pefps0x5rZy/shr2dm179kRLeuIdD) |
 | Video demo (3 min) | `PEGAR AQUÍ EL LINK DEL VIDEO` |
-| Documento de arquitectura (PDF) | [docs/Arquitectura-y-Documentacion.pdf](docs/Arquitectura y Documentacion.pdf) |
+| Documento de arquitectura (PDF) | [docs/Arquitectura-y-Documentacion.pdf](docs/Documentacion_y_Arquitectura.pdf) |
 | Flujo principal n8n (JSON) | [workflow/gestor-leads-ia.json](workflow/gestor-leads-ia.json) |
 | Flujo de alertas globales (JSON) | [workflow/alertas-errores-globales.json](workflow/alertas-errores-globales.json) |
 
@@ -43,7 +43,7 @@ Formulario web (webhook)
       └─ vence    → Lead "Sin respuesta (vencido)" + aviso en el hilo
 ```
 
-El diagrama completo, el recorrido nodo por nodo, el manual de datos, la matriz de costos y la sección de seguridad están en el [PDF](docs/Arquitectura y Documentacion.pdf).
+El diagrama completo, el recorrido nodo por nodo, el manual de datos, la matriz de costos y la sección de seguridad están en el [PDF](docs/Documentacion_y_Arquitectura.pdf).
 
 ## Requisitos de la consigna
 
