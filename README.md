@@ -99,3 +99,5 @@ La base de Airtable se genera con la instrucción de [`database/omni-ai-prompt.m
 │   └── servicios.csv
 └── screenshots/   (evidencias de las pruebas)
 ```
+
+Para este proyecto trabajé con un asistente de IA (Claude) como apoyo.
