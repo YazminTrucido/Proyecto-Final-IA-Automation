@@ -11,7 +11,7 @@ Ecosistema de automatización que resuelve de punta a punta la atención de cons
 |---|---|
 | Base de datos Airtable (modo lectura) | [LINK DE LA VISTA COMPARTIDA](https://airtable.com/appbZ1Pefps0x5rZy/shrhHYOXvNbDbkBOJ) |
 | Dashboard de control (KPIs y tasa de error) | [LINK DEL DASHBOARD](https://airtable.com/appbZ1Pefps0x5rZy/shr2dm179kRLeuIdD) |
-| Video demo (3 min) | `PEGAR AQUÍ EL LINK DEL VIDEO` |
+| Video demo (3 min) | [LINK DEL VIDEO](https://drive.google.com/file/d/19jveVUecquAqXGsWXea5dxeVP1sOOSbw/view?usp=sharing) |
 | Documento de arquitectura (PDF) | [docs/Arquitectura-y-Documentacion.pdf](docs/Documentacion_y_Arquitectura.pdf) |
 | Flujo principal n8n (JSON) | [workflow/gestor-leads-ia.json](workflow/gestor-leads-ia.json) |
 | Flujo de alertas globales (JSON) | [workflow/alertas-errores-globales.json](workflow/alertas-errores-globales.json) |
